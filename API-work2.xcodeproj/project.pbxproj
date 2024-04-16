@@ -15,6 +15,8 @@
 		019BA0252BCE24300096CC00 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA0242BCE24300096CC00 /* TabBarController.swift */; };
 		019BA0272BCE251D0096CC00 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA0262BCE251D0096CC00 /* TodosViewController.swift */; };
 		019BA02A2BCE29A90096CC00 /* TabBarController+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA0292BCE29A90096CC00 /* TabBarController+Appearance.swift */; };
+		019BA02D2BCE38B30096CC00 /* ViewController+appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA02C2BCE38B30096CC00 /* ViewController+appearance.swift */; };
+		019BA0302BCE3A410096CC00 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA02F2BCE3A410096CC00 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		019BA0242BCE24300096CC00 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		019BA0262BCE251D0096CC00 /* TodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
 		019BA0292BCE29A90096CC00 /* TabBarController+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBarController+Appearance.swift"; sourceTree = "<group>"; };
+		019BA02C2BCE38B30096CC00 /* ViewController+appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+appearance.swift"; sourceTree = "<group>"; };
+		019BA02F2BCE3A410096CC00 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		019BA0222BCE238B0096CC00 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				019BA02E2BCE3A110096CC00 /* CustomCell */,
 				019BA0112BCE214A0096CC00 /* UsersViewController.swift */,
 				019BA0262BCE251D0096CC00 /* TodosViewController.swift */,
 				019BA0242BCE24300096CC00 /* TabBarController.swift */,
@@ -101,8 +106,17 @@
 			isa = PBXGroup;
 			children = (
 				019BA0292BCE29A90096CC00 /* TabBarController+Appearance.swift */,
+				019BA02C2BCE38B30096CC00 /* ViewController+appearance.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		019BA02E2BCE3A110096CC00 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				019BA02F2BCE3A410096CC00 /* UserCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +189,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019BA0302BCE3A410096CC00 /* UserCell.swift in Sources */,
+				019BA02D2BCE38B30096CC00 /* ViewController+appearance.swift in Sources */,
 				019BA0122BCE214A0096CC00 /* UsersViewController.swift in Sources */,
 				019BA0252BCE24300096CC00 /* TabBarController.swift in Sources */,
 				019BA00E2BCE214A0096CC00 /* AppDelegate.swift in Sources */,
