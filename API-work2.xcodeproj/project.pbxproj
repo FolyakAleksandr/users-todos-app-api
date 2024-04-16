@@ -21,6 +21,7 @@
 		019BA0362BCE44200096CC00 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 019BA0352BCE44200096CC00 /* Alamofire */; };
 		019BA0382BCE44210096CC00 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 019BA0372BCE44210096CC00 /* AlamofireDynamic */; };
 		019BA03B2BCE45A80096CC00 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA03A2BCE45A80096CC00 /* User.swift */; };
+		019BA03D2BCE58850096CC00 /* InfoUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA03C2BCE58850096CC00 /* InfoUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		019BA02F2BCE3A410096CC00 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		019BA0322BCE43F40096CC00 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		019BA03A2BCE45A80096CC00 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		019BA03C2BCE58850096CC00 /* InfoUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				019BA0112BCE214A0096CC00 /* UsersViewController.swift */,
 				019BA0262BCE251D0096CC00 /* TodosViewController.swift */,
 				019BA0242BCE24300096CC00 /* TabBarController.swift */,
+				019BA03C2BCE58850096CC00 /* InfoUserViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				019BA03B2BCE45A80096CC00 /* User.swift in Sources */,
 				019BA02D2BCE38B30096CC00 /* ViewController+appearance.swift in Sources */,
 				019BA0122BCE214A0096CC00 /* UsersViewController.swift in Sources */,
+				019BA03D2BCE58850096CC00 /* InfoUserViewController.swift in Sources */,
 				019BA0252BCE24300096CC00 /* TabBarController.swift in Sources */,
 				019BA00E2BCE214A0096CC00 /* AppDelegate.swift in Sources */,
 				019BA0272BCE251D0096CC00 /* TodosViewController.swift in Sources */,

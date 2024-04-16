@@ -65,7 +65,7 @@ final class UsersViewController: UIViewController {
         usersTableView.addSubview(refreshControl)
         refreshControl.addTarget(self, action: #selector(swipeRefreshControl), for: .valueChanged)
     }
-    
+
     @objc private func swipeRefreshControl(sender: UIRefreshControl) {
         sender.beginRefreshing()
         fetchData()
@@ -74,7 +74,7 @@ final class UsersViewController: UIViewController {
 
 // MARK: - Extension
 
-extension UsersViewController: UITableViewDataSource {
+extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersArray.count
     }
