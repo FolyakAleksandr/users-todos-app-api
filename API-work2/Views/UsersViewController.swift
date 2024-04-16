@@ -1,9 +1,19 @@
 import UIKit
 
 final class UsersViewController: UIViewController {
-    // MARK: - Private properties
+    // MARK: - Private Properties
 
     private let usersTableView = UITableView()
+    private let refreshControl = UIRefreshControl()
+
+    // MARK: - Private variables
+
+    private var usersArray = [User]() {
+        didSet {
+            usersTableView.reloadData()
+            refreshControl.endRefreshing()
+        }
+    }
 
     // MARK: - Life cycle
 
@@ -11,6 +21,12 @@ final class UsersViewController: UIViewController {
         super.viewDidLoad()
         setupBackgorund()
         setupUI()
+        setupRefreshControl()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchData()
     }
 
     // MARK: - Private Methods
@@ -37,18 +53,37 @@ final class UsersViewController: UIViewController {
         usersTableView.showsVerticalScrollIndicator = false
         usersTableView.register(UserCell.self, forCellReuseIdentifier: "UserCell")
     }
+
+    private func fetchData() {
+        NetworkManager.instance.getUsers { [weak self] users in
+            guard let self = self else { return }
+            self.usersArray = users
+        }
+    }
+
+    private func setupRefreshControl() {
+        usersTableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(swipeRefreshControl), for: .valueChanged)
+    }
+    
+    @objc private func swipeRefreshControl(sender: UIRefreshControl) {
+        sender.beginRefreshing()
+        fetchData()
+    }
 }
 
 // MARK: - Extension
 
 extension UsersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return usersArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell else { return UITableViewCell() }
-        cell.setInfo(name: "", email: "")
+        cell.setInfo(
+            name: "\(usersArray[indexPath.row].name)",
+            email: "\(usersArray[indexPath.row].email)")
         cell.selectionStyle = .none
 
         return cell
