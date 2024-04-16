@@ -22,7 +22,22 @@
 		019BA0382BCE44210096CC00 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 019BA0372BCE44210096CC00 /* AlamofireDynamic */; };
 		019BA03B2BCE45A80096CC00 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA03A2BCE45A80096CC00 /* User.swift */; };
 		019BA03D2BCE58850096CC00 /* InfoUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA03C2BCE58850096CC00 /* InfoUserViewController.swift */; };
+		019BA0402BCE6F610096CC00 /* UserViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA03F2BCE6F610096CC00 /* UserViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		019BA0412BCEE25C0096CC00 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = file.rcproject;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# rctool\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
 		019BA00A2BCE214A0096CC00 /* API-work2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "API-work2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +55,7 @@
 		019BA0322BCE43F40096CC00 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		019BA03A2BCE45A80096CC00 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		019BA03C2BCE58850096CC00 /* InfoUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserViewController.swift; sourceTree = "<group>"; };
+		019BA03F2BCE6F610096CC00 /* UserViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,11 +90,12 @@
 		019BA00C2BCE214A0096CC00 /* API-work2 */ = {
 			isa = PBXGroup;
 			children = (
-				019BA0392BCE45950096CC00 /* Models */,
 				019BA0212BCE23780096CC00 /* Application */,
 				019BA0282BCE291F0096CC00 /* Extension */,
 				019BA0312BCE43D70096CC00 /* Manager */,
+				019BA0392BCE45950096CC00 /* Models */,
 				019BA0232BCE23A40096CC00 /* Sources */,
+				019BA03E2BCE6F230096CC00 /* Protocols */,
 				019BA0222BCE238B0096CC00 /* Views */,
 			);
 			path = "API-work2";
@@ -98,9 +115,9 @@
 			children = (
 				019BA02E2BCE3A110096CC00 /* CustomCell */,
 				019BA0112BCE214A0096CC00 /* UsersViewController.swift */,
+				019BA03C2BCE58850096CC00 /* InfoUserViewController.swift */,
 				019BA0262BCE251D0096CC00 /* TodosViewController.swift */,
 				019BA0242BCE24300096CC00 /* TabBarController.swift */,
-				019BA03C2BCE58850096CC00 /* InfoUserViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +165,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		019BA03E2BCE6F230096CC00 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				019BA03F2BCE6F610096CC00 /* UserViewControllerDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,6 +185,7 @@
 				019BA0082BCE214A0096CC00 /* Resources */,
 			);
 			buildRules = (
+				019BA0412BCEE25C0096CC00 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -233,6 +259,7 @@
 				019BA03D2BCE58850096CC00 /* InfoUserViewController.swift in Sources */,
 				019BA0252BCE24300096CC00 /* TabBarController.swift in Sources */,
 				019BA00E2BCE214A0096CC00 /* AppDelegate.swift in Sources */,
+				019BA0402BCE6F610096CC00 /* UserViewControllerDelegate.swift in Sources */,
 				019BA0272BCE251D0096CC00 /* TodosViewController.swift in Sources */,
 				019BA0102BCE214A0096CC00 /* SceneDelegate.swift in Sources */,
 				019BA02A2BCE29A90096CC00 /* TabBarController+Appearance.swift in Sources */,
@@ -377,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y34PWYMPM8;
@@ -393,6 +421,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Folyak.API-work2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -404,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y34PWYMPM8;
@@ -420,6 +450,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Folyak.API-work2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

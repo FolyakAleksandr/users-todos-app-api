@@ -22,6 +22,7 @@ final class UsersViewController: UIViewController {
         setupBackgorund()
         setupUI()
         setupRefreshControl()
+        navigationController?.topViewController?.title = "\(usersArray.count) users"
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +49,7 @@ final class UsersViewController: UIViewController {
 
     private func configureUsersTableView() {
         usersTableView.dataSource = self
+        usersTableView.delegate = self
         usersTableView.backgroundColor = .white
         usersTableView.separatorStyle = .none
         usersTableView.showsVerticalScrollIndicator = false
@@ -58,6 +60,7 @@ final class UsersViewController: UIViewController {
         NetworkManager.instance.getUsers { [weak self] users in
             guard let self = self else { return }
             self.usersArray = users
+            navigationController?.topViewController?.title = "\(users.count) users"
         }
     }
 
@@ -87,5 +90,18 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = InfoUserViewController()
+        vc.delegate = self
+        vc.index = indexPath
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension UsersViewController: UserViewControllerDelegate {
+    func dataTransfer(index: IndexPath) -> User {
+        usersArray[index.row]
     }
 }

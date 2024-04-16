@@ -27,6 +27,9 @@ final class InfoUserViewController: UIViewController {
     private let businessStrategyLabel = UILabel()
     
     // MARK: - Variables
+
+    weak var delegate: UserViewControllerDelegate?
+    var index = IndexPath()
     
     // MARK: - Lyfe cycle
 
@@ -51,6 +54,8 @@ final class InfoUserViewController: UIViewController {
         configurePersonalDataStackView()
         configureAddressStackView()
         configureCompanyStackView()
+        
+        setupTextInLabels()
     }
     
     private func configureTitles() {
@@ -148,5 +153,36 @@ final class InfoUserViewController: UIViewController {
         companyStackView.distribution = .fillEqually
         companyStackView.alignment = .fill
         companyStackView.spacing = 5
+    }
+    
+    private func setupTextInLabels() {
+        guard let namePerson = delegate?.dataTransfer(index: index).name,
+              let username = delegate?.dataTransfer(index: index).username,
+              let email = delegate?.dataTransfer(index: index).email,
+              let phone = delegate?.dataTransfer(index: index).phone,
+              let website = delegate?.dataTransfer(index: index).website,
+              let street = delegate?.dataTransfer(index: index).address.street,
+              let suite = delegate?.dataTransfer(index: index).address.suite,
+              let city = delegate?.dataTransfer(index: index).address.city,
+              let zipcode = delegate?.dataTransfer(index: index).address.zipcode,
+              let geoLat = delegate?.dataTransfer(index: index).address.geo.lat,
+              let geoLng = delegate?.dataTransfer(index: index).address.geo.lng,
+              let nameCompany = delegate?.dataTransfer(index: index).company.name,
+              let catchPhrase = delegate?.dataTransfer(index: index).company.catchPhrase,
+              let businessStrategy = delegate?.dataTransfer(index: index).company.bs else { return }
+
+        nameLabel.text = "Name: \(namePerson)"
+        usernameLabel.text = "Username: \(username)"
+        emailLabel.text = "Email: \(email)"
+        phoneLabel.text = "Phone: \(phone)"
+        websiteLabel.text = "Website: \(website)"
+        streetLabel.text = "Street: \(street)"
+        suiteLabel.text = "Suite: \(suite)"
+        cityLabel.text = "City: \(city)"
+        zipcodeLabel.text = "Zipcode: \(zipcode)"
+        geoLabel.text = "Geo: lat: \(geoLat), lng: \(geoLng)"
+        nameCompanyLabel.text = "Name: \(nameCompany)"
+        catchPhraseLabel.text = "CatchPhrase: \(catchPhrase)"
+        businessStrategyLabel.text = "Bs: \(businessStrategy)"
     }
 }
