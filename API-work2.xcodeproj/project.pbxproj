@@ -18,11 +18,12 @@
 		019BA02D2BCE38B30096CC00 /* ViewController+appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA02C2BCE38B30096CC00 /* ViewController+appearance.swift */; };
 		019BA0302BCE3A410096CC00 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA02F2BCE3A410096CC00 /* UserCell.swift */; };
 		019BA0332BCE43F40096CC00 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA0322BCE43F40096CC00 /* NetworkManager.swift */; };
-		019BA0362BCE44200096CC00 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 019BA0352BCE44200096CC00 /* Alamofire */; };
-		019BA0382BCE44210096CC00 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 019BA0372BCE44210096CC00 /* AlamofireDynamic */; };
 		019BA03B2BCE45A80096CC00 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA03A2BCE45A80096CC00 /* User.swift */; };
 		019BA03D2BCE58850096CC00 /* InfoUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA03C2BCE58850096CC00 /* InfoUserViewController.swift */; };
 		019BA0402BCE6F610096CC00 /* UserViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BA03F2BCE6F610096CC00 /* UserViewControllerDelegate.swift */; };
+		01E6A4D02BCEFD73000D4CD7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 01E6A4CF2BCEFD73000D4CD7 /* Alamofire */; };
+		01E6A4D92BCF022C000D4CD7 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 01E6A4D82BCF022C000D4CD7 /* AlamofireDynamic */; };
+		01E6A4DF2BCFC7C9000D4CD7 /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6A4DE2BCFC7C9000D4CD7 /* TodoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -38,6 +39,19 @@
 			script = "# rctool\n";
 		};
 /* End PBXBuildRule section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0192ED902BCEEC200058EFB9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		019BA00A2BCE214A0096CC00 /* API-work2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "API-work2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +70,7 @@
 		019BA03A2BCE45A80096CC00 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		019BA03C2BCE58850096CC00 /* InfoUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserViewController.swift; sourceTree = "<group>"; };
 		019BA03F2BCE6F610096CC00 /* UserViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerDelegate.swift; sourceTree = "<group>"; };
+		01E6A4DE2BCFC7C9000D4CD7 /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019BA0362BCE44200096CC00 /* Alamofire in Frameworks */,
-				019BA0382BCE44210096CC00 /* AlamofireDynamic in Frameworks */,
+				01E6A4D02BCEFD73000D4CD7 /* Alamofire in Frameworks */,
+				01E6A4D92BCF022C000D4CD7 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,9 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				019BA02E2BCE3A110096CC00 /* CustomCell */,
-				019BA0112BCE214A0096CC00 /* UsersViewController.swift */,
-				019BA03C2BCE58850096CC00 /* InfoUserViewController.swift */,
-				019BA0262BCE251D0096CC00 /* TodosViewController.swift */,
+				01E6A4DB2BCFC481000D4CD7 /* TodoViews */,
+				01E6A4DA2BCFC3D3000D4CD7 /* UserViews */,
 				019BA0242BCE24300096CC00 /* TabBarController.swift */,
 			);
 			path = Views;
@@ -145,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				019BA02F2BCE3A410096CC00 /* UserCell.swift */,
+				01E6A4DE2BCFC7C9000D4CD7 /* TodoCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -173,6 +188,23 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		01E6A4DA2BCFC3D3000D4CD7 /* UserViews */ = {
+			isa = PBXGroup;
+			children = (
+				019BA0112BCE214A0096CC00 /* UsersViewController.swift */,
+				019BA03C2BCE58850096CC00 /* InfoUserViewController.swift */,
+			);
+			path = UserViews;
+			sourceTree = "<group>";
+		};
+		01E6A4DB2BCFC481000D4CD7 /* TodoViews */ = {
+			isa = PBXGroup;
+			children = (
+				019BA0262BCE251D0096CC00 /* TodosViewController.swift */,
+			);
+			path = TodoViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +215,7 @@
 				019BA0062BCE214A0096CC00 /* Sources */,
 				019BA0072BCE214A0096CC00 /* Frameworks */,
 				019BA0082BCE214A0096CC00 /* Resources */,
+				0192ED902BCEEC200058EFB9 /* Embed Frameworks */,
 			);
 			buildRules = (
 				019BA0412BCEE25C0096CC00 /* PBXBuildRule */,
@@ -191,8 +224,8 @@
 			);
 			name = "API-work2";
 			packageProductDependencies = (
-				019BA0352BCE44200096CC00 /* Alamofire */,
-				019BA0372BCE44210096CC00 /* AlamofireDynamic */,
+				01E6A4CF2BCEFD73000D4CD7 /* Alamofire */,
+				01E6A4D82BCF022C000D4CD7 /* AlamofireDynamic */,
 			);
 			productName = "API-work2";
 			productReference = 019BA00A2BCE214A0096CC00 /* API-work2.app */;
@@ -223,7 +256,7 @@
 			);
 			mainGroup = 019BA0012BCE21490096CC00;
 			packageReferences = (
-				019BA0342BCE44200096CC00 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				01E6A4CE2BCEFD73000D4CD7 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 019BA00B2BCE214A0096CC00 /* Products */;
 			projectDirPath = "";
@@ -257,6 +290,7 @@
 				019BA02D2BCE38B30096CC00 /* ViewController+appearance.swift in Sources */,
 				019BA0122BCE214A0096CC00 /* UsersViewController.swift in Sources */,
 				019BA03D2BCE58850096CC00 /* InfoUserViewController.swift in Sources */,
+				01E6A4DF2BCFC7C9000D4CD7 /* TodoCell.swift in Sources */,
 				019BA0252BCE24300096CC00 /* TabBarController.swift in Sources */,
 				019BA00E2BCE214A0096CC00 /* AppDelegate.swift in Sources */,
 				019BA0402BCE6F610096CC00 /* UserViewControllerDelegate.swift in Sources */,
@@ -481,25 +515,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		019BA0342BCE44200096CC00 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		01E6A4CE2BCEFD73000D4CD7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = upToNextMinorVersion;
 				minimumVersion = 5.9.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		019BA0352BCE44200096CC00 /* Alamofire */ = {
+		01E6A4CF2BCEFD73000D4CD7 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 019BA0342BCE44200096CC00 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 01E6A4CE2BCEFD73000D4CD7 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		019BA0372BCE44210096CC00 /* AlamofireDynamic */ = {
+		01E6A4D82BCF022C000D4CD7 /* AlamofireDynamic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 019BA0342BCE44200096CC00 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 01E6A4CE2BCEFD73000D4CD7 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */

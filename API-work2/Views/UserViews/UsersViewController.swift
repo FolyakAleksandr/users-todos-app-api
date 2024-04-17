@@ -22,7 +22,6 @@ final class UsersViewController: UIViewController {
         setupBackgorund()
         setupUI()
         setupRefreshControl()
-        navigationController?.topViewController?.title = "\(usersArray.count) users"
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -60,7 +59,6 @@ final class UsersViewController: UIViewController {
         NetworkManager.instance.getUsers { [weak self] users in
             guard let self = self else { return }
             self.usersArray = users
-            navigationController?.topViewController?.title = "\(users.count) users"
         }
     }
 
