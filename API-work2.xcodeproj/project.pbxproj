@@ -24,6 +24,7 @@
 		01E6A4D02BCEFD73000D4CD7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 01E6A4CF2BCEFD73000D4CD7 /* Alamofire */; };
 		01E6A4D92BCF022C000D4CD7 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 01E6A4D82BCF022C000D4CD7 /* AlamofireDynamic */; };
 		01E6A4DF2BCFC7C9000D4CD7 /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6A4DE2BCFC7C9000D4CD7 /* TodoCell.swift */; };
+		01E6A4E12BCFCC98000D4CD7 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6A4E02BCFCC98000D4CD7 /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -71,6 +72,7 @@
 		019BA03C2BCE58850096CC00 /* InfoUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUserViewController.swift; sourceTree = "<group>"; };
 		019BA03F2BCE6F610096CC00 /* UserViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerDelegate.swift; sourceTree = "<group>"; };
 		01E6A4DE2BCFC7C9000D4CD7 /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
+		01E6A4E02BCFCC98000D4CD7 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				019BA03A2BCE45A80096CC00 /* User.swift */,
+				01E6A4E02BCFCC98000D4CD7 /* Todo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				019BA0122BCE214A0096CC00 /* UsersViewController.swift in Sources */,
 				019BA03D2BCE58850096CC00 /* InfoUserViewController.swift in Sources */,
 				01E6A4DF2BCFC7C9000D4CD7 /* TodoCell.swift in Sources */,
+				01E6A4E12BCFCC98000D4CD7 /* Todo.swift in Sources */,
 				019BA0252BCE24300096CC00 /* TabBarController.swift in Sources */,
 				019BA00E2BCE214A0096CC00 /* AppDelegate.swift in Sources */,
 				019BA0402BCE6F610096CC00 /* UserViewControllerDelegate.swift in Sources */,

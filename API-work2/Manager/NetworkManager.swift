@@ -23,4 +23,13 @@ class NetworkManager {
             }
         }
     }
+
+    func getTodos(completion: @escaping (([Todo]) -> ())) {
+        AF.request(BeginURL.jsonPlaceholder + EndURL.todos).responseDecodable(of: [Todo].self) { responde in
+            switch responde.result {
+            case .success(let todo): completion(todo)
+            case .failure(let failure): print(failure)
+            }
+        }
+    }
 }
